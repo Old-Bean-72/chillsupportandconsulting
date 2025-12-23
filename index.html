@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Chill Support and Consulting — calm, experienced support and consulting. Website coming soon." />
+  <title>Chill Support & Consulting</title>
+
+  <style>
+    :root{
+      --sage: #a9c197;
+      --sage-dark: #90b080;
+      --text: #1f2a23;
+      --muted: #5b6b60;
+      --bg: #ffffff;
+      --card: #f7faf7;
+      --border: #e6eee6;
+      --shadow: 0 12px 30px rgba(0,0,0,.06);
+    }
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 700px at 50% 10%, rgba(169,193,151,.22), transparent 60%), var(--bg);
+      min-height: 100svh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 16px;
+    }
+    .wrap{ width: min(760px, 100%); text-align:center; }
+    .card{
+      background: rgba(255,255,255,.88);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .logo{
+      width: min(520px, 100%);
+      height: auto;
+      display:block;
+      margin: 0 auto 18px;
+    }
+    h1{
+      margin: 8px 0 6px;
+      font-size: clamp(22px, 3.2vw, 30px);
+      letter-spacing: .2px;
+    }
+    p{
+      margin: 10px auto 0;
+      color: var(--muted);
+      font-size: clamp(15px, 2.2vw, 17px);
+      line-height: 1.55;
+      max-width: 52ch;
+    }
+    .pill{
+      display:inline-block;
+      margin-top: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .actions{
+      margin-top: 18px;
+      display:flex;
+      gap: 10px;
+      justify-content:center;
+      flex-wrap: wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding: 11px 16px;
+      border-radius: 14px;
+      text-decoration:none;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: #fff;
+      transition: transform .08s ease, border-color .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(144,176,128,.7); }
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(169,193,151,.95), rgba(144,176,128,.95));
+      color: #0f1a12;
+      border-color: transparent;
+    }
+    footer{ margin-top: 14px; font-size: 13px; color: #7b887f; }
+    .small{ font-size: 13px; color: #7b887f; margin-top: 10px; }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card" aria-label="Holding page">
+      <img class="logo" src="assets/chill-logo.png" alt="Chill Support and Consulting logo" />
+
+      <h1>Calm, experienced support and consulting.</h1>
+
+      <p>
+        Chill Support &amp; Consulting provides practical, people-focused support for organisations and leaders.
+        Our website is coming soon.
+      </p>
+
+      <div class="pill">Now taking enquiries</div>
+
+      <div class="actions">
+        <a class="btn primary" href="mailto:claire@chillsupport.consulting">Email Claire</a>
+        <a class="btn" href="#" onclick="alert('LinkedIn coming soon'); return false;">LinkedIn (coming soon)</a>
+      </div>
+
+      <div class="small">
+        UK-based support and consulting • Responding within 1–2 working days
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Chill Support &amp; Consulting
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </main>
+</body>
+</html>
